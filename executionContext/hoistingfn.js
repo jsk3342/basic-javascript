@@ -18,4 +18,10 @@ function a () {
     console.log(b);
 }
 
+let b = () => {
+    console.log("호출 했니?")
+}
+
+b();
+
 a();
