@@ -9,3 +9,4 @@ var obj = {
 }
 
 obj.method(2)
+
