@@ -66,8 +66,21 @@ ES5까지 비표준이었다. 하지만 일부 브라우저에서 __proto__를 �
 ## 함수 객체의 protorype 프로퍼티
 함수 객체만이 소유하는 prototype 프로퍼티는 생성자 함수가 생성할 인스턴스의 프로토타입을 가리킨다.
 
-## constructor 프로퍼티
+## constructor 프로퍼티와 생성자 함수
 프로토타입 객체는 constructor 프로퍼티를 갖는다. 이 프로퍼티는 객체의 입장에서 자신을 생성한 객체를 가리킨다.
+
+모든 프로토타입은 constructor 프로퍼티를 갖는다. 이 프로퍼티는 prototype 프로퍼티로 자신을 참조하고 있는 생성자 함수를 가리킨다. 이 연결은 생성자 함수가 생성될 때, 즉 함수 객체가 생성될 때 이뤄진다. 다음 예제를 살펴보자.
+
+```
+function Person(name) {
+    this.name = name;
+}
+
+const me = new Person('kim');
+
+console.log(me.constructor === Person);
+```
+
 
 ## Prototype chain
 
