@@ -81,8 +81,9 @@ const me = new Person('kim');
 console.log(me.constructor === Person);
 ```
 
-
 ## Prototype chain
+
+
 
 
 
